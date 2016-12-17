@@ -22,14 +22,24 @@ module.exports = function(grunt) {
   				dest: 'images/'
   			}]
   		}
-  	}
+  	},
+
+    watch: {
+    scripts: {
+        files: ['main/*.sass'],
+        tasks: ['sass'],
+        options: {
+            spawn: false,
+        },
+    } 
+}
 
   });
   // Load the plugins tasks 
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-
+  grunt.loadNpmTasks('grunt-contrib-watch');
   // Default task(s).
   
-  grunt.registerTask('default', ['sass', 'imagemin']);
+  grunt.registerTask('default', ['sass', 'imagemin', 'watch']);
 };
