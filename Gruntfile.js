@@ -8,7 +8,7 @@ module.exports = function(grunt) {
   		},
   		dist: {
   			files: {
-  				'css/style.css': 'css/style.sass'
+  				'css/style.css': 'main/style.sass'
   			}
   		}
   	},
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
   				expand: true,
   				cwd: 'images/',
   				src: ['**/*.{png,jpg,gif,jpeg,JPEG}'],
-  				dest: 'images/build/'
+  				dest: 'images/'
   			}]
   		}
   	}
